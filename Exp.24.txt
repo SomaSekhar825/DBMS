@@ -1,0 +1,49 @@
+﻿mysql> use mates;
+Database changed
+mysql> create table cars(model_no int(15),model_name varchar(15),company varchar(15),rental_price int(15));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into cars values(1,'city','honda',5000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into cars values(2,'polo','volkswagen',6000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cars values(3,'thar','mahindra',10000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into cars values(4,'suv','bmw',20000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into cars values(5,'nano','honda',5000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from cars;
++----------+------------+------------+--------------+
+| model_no | model_name | company    | rental_price |
++----------+------------+------------+--------------+
+|        1 | city       | honda      |         5000 |
+|        2 | polo       | volkswagen |         6000 |
+|        3 | thar       | mahindra   |        10000 |
+|        4 | suv        | bmw       |        20000 |
+|        5 | nano       | honda     |         5000 |
++----------+------------+------------+--------------+
+5 rows in set (0.00 sec)
+
+mysql> select max(rental_price),min(rental_price),avg(rental_price) from cars;
++-------------------+-------------------+-------------------+
+| max(rental_price) | min(rental_price) | avg(rental_price) |
++-------------------+-------------------+-------------------+
+|             20000 |              5000 |         9200.0000 |
++-------------------+-------------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(rental_price) from cars;
++-------------------+
+| sum(rental_price) |
++-------------------+
+|             46000 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql>
