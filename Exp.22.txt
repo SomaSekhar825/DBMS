@@ -1,0 +1,43 @@
+﻿mysql> use mates;
+Database changed
+mysql> create table books(id int(15),title varchar(15),type varchar(15),price int(15));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into course values(1,'game of thrones','story',800);
+ERROR 1366 (HY000): Incorrect integer value: 'game of thrones' for column 'regno' at row 1
+mysql> insert into books values(1,'game of thrones','story',800);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into books values(2,'never have i ever','story',1000);
+ERROR 1406 (22001): Data too long for column 'title' at row 1
+mysql>  insert into books values(2,'i blame my mother','story',1000);
+ERROR 1406 (22001): Data too long for column 'title' at row 1
+mysql>  insert into books values(2,'lion king','story',1000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into books values(3,'fifty shades','story',1000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql>  insert into books values(4,'1977','story',1000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from books;
++------+-----------------+-------+-------+
+| id   | title           | type  | price |
++------+-----------------+-------+-------+
+|    1 | game of thrones | story |   800 |
+|    2 | lion king       | story |  1000 |
+|    3 | fifty shades    | story |  1000 |
+|    4 | 1977          | story |  1000 |
++------+-----------------+-------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select avg(price) from books;
++------------+
+| avg(price) |
++------------+
+|   950.0000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql>
