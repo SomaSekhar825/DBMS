@@ -1,0 +1,48 @@
+﻿mysql> use mates;
+Database changed
+mysql> create table hospital(id int(15),patient_name varchar(15),disease varchar(15),fees int(15));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into hospital values(1,'pavan','lung cancer',50000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  insert into hospital values(2,'suneel','corona',90000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into hospital values(3,'koushik','vomits',1000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into hospital values(4,'kiran','bike accident',50000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from hospital;
++------+--------------+---------------+-------+
+| id   | patient_name | disease       | fees  |
++------+--------------+---------------+-------+
+|    1 | koushik     | vomits        |  1000 |   
+|    2 | suneel       | corona        | 90000 |
+|    3 | pavan       |  lung cancer  | 50000 |
+|    4 | kiran       | bike accident | 50000 |
++------+--------------+---------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from hospital order by fees;
++------+--------------+---------------+-------+
+| id   | patient_name | disease       | fees  |
++------+--------------+---------------+-------+
+|    3 | koushik    | vomits        |  1000 |
+|    1 | pavan        | lung cancer   | 50000 |
+|    4 | kiran       | bike accident | 50000 |
+|    2 | suneel       | corona        | 90000 |
++------+--------------+---------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select avg(fees) from hospital;
++------------+
+| avg(fees)  |
++------------+
+| 47750.0000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql>
