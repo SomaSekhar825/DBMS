@@ -108,7 +108,7 @@ mysql> select sum(marks) from mark;
 |        273 |
 +------------+
 1 row in set (0.00 sec)
-mysql> select * from student where name LIKE '%AA';
+mysql> select * from student where name LIKE '%ya';
 +-------+------------+--------+------------+-----------+----------+
 | Regno | name       | gender | dob        | mobileno  | emis     |
 +-------+------------+--------+------------+-----------+----------+
@@ -116,7 +116,7 @@ mysql> select * from student where name LIKE '%AA';
 +-------+------------+--------+------------+-----------+----------+
 1 row in set (0.00 sec)
 
-mysql> select * from student where name LIKE 'VI%';
+mysql> select * from student where name LIKE 'ma%';
 +-------+---------+--------+------------+----------+---------+
 | Regno | name    | gender | dob        | mobileno | emis    |
 +-------+---------+--------+------------+----------+---------+
